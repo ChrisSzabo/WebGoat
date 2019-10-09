@@ -3,7 +3,7 @@ pipeline {
     string(name: 'DOCKER_REGISTRY', defaultValue: params.DOCKER_REGISTRY)
     string(name: 'SWARM_MANAGER_ADDR', defaultValue: params.SWARM_MANAGER_ADDR)
     string(name: 'ENDPOINT_HOSTNAME', defaultValue: params.ENDPOINT_HOSTNAME)
-    string(name: 'VENARI_MASTER_URL', defaultValue: params.VENARI_MASTER_URL,descripton: "Venari Master Url")
+    string(name: 'VENARI_MASTER_URL', defaultValue: params.VENARI_MASTER_URL)
   }
   agent none
   stages {
