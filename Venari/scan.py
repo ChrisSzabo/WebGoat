@@ -33,6 +33,7 @@ def upload_templates():
     api:VenariApi=do_login()
     api.import_template_from_file('scan-template.jobtemplate.json',venari_workspace,"http://webgoat:8080")
     api.import_workflow_from_file('register-user.workflow.yaml',venari_workspace)
+    api.start_job_fromtemplate("CI-CD",venari_workspace,"Authenticated Exploit")
     pass
 
 if __name__ == '__main__':
