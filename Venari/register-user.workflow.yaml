@@ -1,0 +1,55 @@
+Header:
+  Name: Register User
+  ApplicationName: Local Webgoat
+  RequiresLogin: False
+Actions:
+- Navigate:
+    Url: '{endpoint}/WebGoat/login'
+- WaitForContent: {}
+- Snapshot: {}
+- Click:
+    Nearest: Any
+    Patterns:
+    - Register new user
+- WaitForContent: {}
+- Snapshot: {}
+- FindTextInputs:
+    Take: 1
+    Nearest: Any
+    Patterns:
+    - Username
+- SendText:
+    Text: '{Username}'
+    Overwrite: true
+- FindPasswords:
+    Take: 1
+    Nearest: Any
+    Patterns:
+    - Password
+- SendText:
+    Text: '{Password}'
+    Overwrite: true
+- FindPasswords:
+    Take: 1
+    Skip: 1
+    Nearest: Any
+    Patterns:
+    - Password
+- SendText:
+    Text: '{Password_2}'
+    Overwrite: true
+- FindCheckboxes:
+    Take: 1
+    Nearest: Right
+    Patterns:
+    - >-
+      Agree with the terms and
+                                          conditions
+- ToggleCheckboxes:
+    Checked: true
+- Click:
+    Nearest: Any
+    Patterns:
+    - Sign up
+- WaitForContent: {}
+- Snapshot: {}

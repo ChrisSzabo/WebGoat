@@ -1,0 +1,1024 @@
+{
+    "WorkspaceName": "Local Webgoat",
+    "JobTemplateName": "Authenticated Exploit",
+    "SettingsType": "ExploiterJobSettingsDbObject",
+    "SettingsTypeDisplayName": "Exploiter",
+    "Patch": [
+        {
+            "value": "Local Webgoat",
+            "path": "/WorkflowSettings/ApplicationName",
+            "op": "replace"
+        },
+        {
+            "value": "Register User",
+            "path": "/WorkflowSettings/SetupWorkflow",
+            "op": "replace"
+        },
+        {
+            "value": [],
+            "path": "/WorkflowSettings/Workflows",
+            "op": "replace"
+        },
+        {
+            "value": [],
+            "path": "/WorkflowSettings/OrderedTrafficWorkflows",
+            "op": "replace"
+        },
+        {
+            "value": [],
+            "path": "/WorkflowSettings/StartWorkflows",
+            "op": "replace"
+        },
+        {
+            "value": [],
+            "path": "/WorkflowSettings/RunSettings/Parameters",
+            "op": "replace"
+        },
+        {
+            "value": {
+                "Entries": []
+            },
+            "path": "/WorkflowSettings/RunSettings/DatasetSettings",
+            "op": "replace"
+        },
+        {
+            "value": "administrator",
+            "path": "/WorkflowSettings/AutoLoginUserName",
+            "op": "replace"
+        },
+        {
+            "value": "password",
+            "path": "/WorkflowSettings/AutoLoginPassword",
+            "op": "replace"
+        },
+        {
+            "value": [],
+            "path": "/RulesSettings/EnabledInspectRules/Behaviors",
+            "op": "replace"
+        },
+        {
+            "value": [],
+            "path": "/RulesSettings/EnabledInspectRules/Parameters",
+            "op": "replace"
+        },
+        {
+            "value": [],
+            "path": "/RulesSettings/EnabledInspectRules/ExcludeRuleInputTypes",
+            "op": "replace"
+        },
+        {
+            "value": [],
+            "path": "/RulesSettings/EnabledFuzzRules/Behaviors",
+            "op": "replace"
+        },
+        {
+            "value": [],
+            "path": "/RulesSettings/EnabledFuzzRules/Parameters",
+            "op": "replace"
+        },
+        {
+            "value": [],
+            "path": "/RulesSettings/EnabledFuzzRules/ExcludeRuleInputTypes",
+            "op": "replace"
+        },
+        {
+            "value": [
+                "http://localhost:9191/WebGoat"
+            ],
+            "path": "/ResourceScope/SeedResources/StartUrls",
+            "op": "replace"
+        },
+        {
+            "value": [],
+            "path": "/ResourceScope/RestrictToFolders",
+            "op": "replace"
+        },
+        {
+            "value": [],
+            "path": "/ResourceScope/HostWhiteList",
+            "op": "replace"
+        },
+        {
+            "value": [
+                5,
+                2,
+                3,
+                0,
+                1
+            ],
+            "path": "/ResourceScope/ResourceCategoryBlackList",
+            "op": "replace"
+        },
+        {
+            "value": [],
+            "path": "/ResourceScope/UrlContainsBlackListRules",
+            "op": "replace"
+        },
+        {
+            "value": [
+                {
+                    "Pattern": "JSESSIONID",
+                    "Action": 8
+                },
+                {
+                    "Pattern": "__cfduid",
+                    "Action": 8
+                },
+                {
+                    "Pattern": "PHPSESSID",
+                    "Action": 8
+                },
+                {
+                    "Pattern": "ASP.NET_SessionId",
+                    "Action": 8
+                },
+                {
+                    "Pattern": "__VIEWSTATE",
+                    "Action": 8
+                },
+                {
+                    "Pattern": "__VIEWSTATEENCRYPTED",
+                    "Action": 8
+                },
+                {
+                    "Pattern": "__VIEWSTATEGENERATOR",
+                    "Action": 8
+                },
+                {
+                    "Pattern": "__EVENTVALIDATION",
+                    "Action": 8
+                },
+                {
+                    "Pattern": "__EVENTTARGET",
+                    "Action": 8
+                },
+                {
+                    "Pattern": "__EVENTARGUMENT",
+                    "Action": 8
+                },
+                {
+                    "Pattern": "__LASTFOCUS",
+                    "Action": 8
+                }
+            ],
+            "path": "/ResourceScope/ParameterFuzzingBlackListRules",
+            "op": "replace"
+        },
+        {
+            "value": [],
+            "path": "/HttpMessageConfig/StateControlData/CustomHeaders",
+            "op": "replace"
+        },
+        {
+            "value": [],
+            "path": "/HttpMessageConfig/StateControlData/AdditionalCookies",
+            "op": "replace"
+        },
+        {
+            "value": [
+                {
+                    "UniqueID": "8d191100-bbe6-4470-852d-fbcffa782684",
+                    "DisplayName": null,
+                    "MaxConcurrent": 10,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": [
+                        {
+                            "Name": "DefaultDataset",
+                            "DisplayName": "Default Dataset",
+                            "Value": null,
+                            "DataType": 6,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "InitializeMethod",
+                            "DisplayName": "Initialize Method",
+                            "Value": "Landing Page",
+                            "DataType": 4,
+                            "List": [
+                                "Landing Page",
+                                "Start Url",
+                                "Login Only",
+                                "Login Then Start Url"
+                            ],
+                            "Description": null
+                        },
+                        {
+                            "Name": "IgnoreStaticHtml",
+                            "DisplayName": "Ignore static HTML",
+                            "Value": "False",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "SkipRedundantUI",
+                            "DisplayName": "Skip Redundant UI",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "HashType",
+                            "DisplayName": "Hash Type",
+                            "Value": "Target Only",
+                            "DataType": 4,
+                            "List": [
+                                "Target Only",
+                                "Target And Labels",
+                                "Target And Labels With Position"
+                            ],
+                            "Description": null
+                        },
+                        {
+                            "Name": "ExcludeClickLabels",
+                            "DisplayName": "Exclude Click Labels",
+                            "Value": "*signin*,*login*,\"*sign in*\",*sign-in*,*sign_in*,\"*log in*\",*log-in*,*log_in*,\"*log back in*\",*logon*,*signon*,\"*log on*\",\"*sign on*\",*signup*,\"*sign up*\",*sign-up*,*sign_up*,*fi-lock*,*logout*,\"*log out*\",*log-out*,*log_out*,*signout*,\"*sign out*\",*sign-out*,*sign_out*,*signoff*,\"*sign off*\",*sign-off*,*sign_off*,english,language,*delete*,*cancel*,*reset*",
+                            "DataType": 3,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "TerminatingClickLabels",
+                            "DisplayName": "Terminating Click Labels",
+                            "Value": "\" back *\",\"* back\",\"back *\"",
+                            "DataType": 3,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "ExcludeFromClickCount",
+                            "DisplayName": "Exclude From Click Count",
+                            "Value": "add,delete,save,submit,update,edit,go,go!,yes,no,continue,next",
+                            "DataType": 3,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "IncludeActionPaths",
+                            "DisplayName": "Include Action Paths",
+                            "Value": null,
+                            "DataType": 3,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "ExcludeActionPaths",
+                            "DisplayName": "Exclude Action Paths",
+                            "Value": null,
+                            "DataType": 3,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "OrderedActionPaths",
+                            "DisplayName": "Ordered Action Paths",
+                            "Value": null,
+                            "DataType": 3,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "ClickDependencies",
+                            "DisplayName": "Click Dependencies",
+                            "Value": null,
+                            "DataType": 3,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "ClickDepth",
+                            "DisplayName": "Click Depth",
+                            "Value": "7",
+                            "DataType": 1,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "MaxClickCount",
+                            "DisplayName": "Max Click Count",
+                            "Value": "1",
+                            "DataType": 1,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "StaticLinkStrategy",
+                            "DisplayName": "Static Link Strategy",
+                            "Value": "Click",
+                            "DataType": 4,
+                            "List": [
+                                "Click",
+                                "Ignore"
+                            ],
+                            "Description": null
+                        },
+                        {
+                            "Name": "WorkflowSaveMode",
+                            "DisplayName": "Workflow Save Mode",
+                            "Value": "Reflections Only",
+                            "DataType": 4,
+                            "List": [
+                                "None",
+                                "All",
+                                "Reflections Only"
+                            ],
+                            "Description": null
+                        },
+                        {
+                            "Name": "ExcludeProbeTrafficParameters",
+                            "DisplayName": "Exclude Probe Traffic Parameters",
+                            "Value": "*state*",
+                            "DataType": 3,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "SendEnterOnTextInputs",
+                            "DisplayName": "Send Enter On Text Inputs",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "SendHovers",
+                            "DisplayName": "Send Hovers",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "SaveTraffic",
+                            "DisplayName": "Save Traffic",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "SaveScreenshots",
+                            "DisplayName": "Save Screenshots",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "DisableCache",
+                            "DisplayName": "Disable Cache",
+                            "Value": "False",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "EnableShortcutUrls",
+                            "DisplayName": "Enable Shortcut Urls",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "EnableChangeSelectInputs",
+                            "DisplayName": "Enable Change Select Inputs",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "EnableDetectSelectNavigation",
+                            "DisplayName": "Enable Detect Select Navigation",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "SaveDefaultValueReflections",
+                            "DisplayName": "Save Default Value Reflections",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "DeduplicateReflectedProbes",
+                            "DisplayName": "De-duplicate reflected probes",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "EnableOrderedDiscovery",
+                            "DisplayName": "Enable Ordered Discovery",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "DisableFormSubmit",
+                            "DisplayName": "Disable Form Submit",
+                            "Value": "False",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "VaryExistingValues",
+                            "DisplayName": "Vary Existing Values",
+                            "Value": "False",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        }
+                    ],
+                    "ParentModules": null
+                },
+                {
+                    "UniqueID": "7bc6263c-4059-4c21-be03-94abc77f5757",
+                    "DisplayName": null,
+                    "MaxConcurrent": 15,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": [
+                        {
+                            "Name": "enqueueRequestsImmediatelyInput",
+                            "DisplayName": "Enqueue URL Requests",
+                            "Value": "After Browsing Completes",
+                            "DataType": 4,
+                            "List": [
+                                "Immediately",
+                                "After Browsing Completes"
+                            ],
+                            "Description": null
+                        },
+                        {
+                            "Name": "parseFormsInput",
+                            "DisplayName": "Queue Forms for Analysis",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "parseCommentsInput",
+                            "DisplayName": "Queue Comments for Analysis",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "parseEndPointsInput",
+                            "DisplayName": "Queue Endpoints for Analysis",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "parseUrlsInput",
+                            "DisplayName": "Queue URLs for Analysis",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "SearchScript",
+                            "DisplayName": "Search Script",
+                            "Value": "False",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "SearchComments",
+                            "DisplayName": "Search Comments",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "SearchInsideUrls",
+                            "DisplayName": "Search inside Urls",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "SearchPlainText",
+                            "DisplayName": "Search Plain Text",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "IncludeOptionalUnanchored",
+                            "DisplayName": "Save unqualified URLs from Optional Locations",
+                            "Value": "False",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "MaxDirectoryDepth",
+                            "DisplayName": "Ignore URLs with Path Depth greater than",
+                            "Value": "10",
+                            "DataType": 1,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "fingerprintTrafficInput",
+                            "DisplayName": "Fingerprint Traffic",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "collectUrlInfoInput",
+                            "DisplayName": "Collect URL Info",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "collectRequestParamsInput",
+                            "DisplayName": "Collect Request Parameters",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "collectRequestHeadersInput",
+                            "DisplayName": "Collect Request Headers",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "collectResponseHeadersInput",
+                            "DisplayName": "Collect Response Headers",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "collectRequestContentInput",
+                            "DisplayName": "Collect Request Content",
+                            "Value": "False",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "collectResponseContentInput",
+                            "DisplayName": "Collect Response Content",
+                            "Value": "False",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "collectCookiesInput",
+                            "DisplayName": "Collect Cookies",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "collectOriginsInput",
+                            "DisplayName": "Collect Origins",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "collectJsFunctionsInput",
+                            "DisplayName": "Collect JS Function Signatures",
+                            "Value": "False",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "collectWordpressInput",
+                            "DisplayName": "Collect WordPress",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "collectAdDomainsInput",
+                            "DisplayName": "Collect Ad Domains",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        }
+                    ],
+                    "ParentModules": null
+                },
+                {
+                    "UniqueID": "e9519a3c-0be2-4ef9-b1dd-be854392bfa2",
+                    "DisplayName": null,
+                    "MaxConcurrent": 5,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": [
+                        {
+                            "Name": "CommonRootDirectories",
+                            "DisplayName": "Common Directories (root)",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": "Directories that are anchored to /"
+                        },
+                        {
+                            "Name": "CommonRootFiles",
+                            "DisplayName": "Common Files (root)",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": "Files that are anchored to /"
+                        },
+                        {
+                            "Name": "UseLargeRootResourceLists",
+                            "DisplayName": "Use Large Root Path Lists",
+                            "Value": "False",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": "Include the very large list of common resources.  Increases job duration"
+                        },
+                        {
+                            "Name": "CommonLogResources",
+                            "DisplayName": "Common Log Paths",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": "Files and directories related to logging"
+                        },
+                        {
+                            "Name": "CommonConfigResources",
+                            "DisplayName": "Common Config Paths",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": "Files and directories related to configuration"
+                        },
+                        {
+                            "Name": "BackupFiles",
+                            "DisplayName": "File Backups",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": "Archived versions of found files"
+                        },
+                        {
+                            "Name": "ApiPaths",
+                            "DisplayName": "API Paths",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": "Paths and files related to APIs"
+                        },
+                        {
+                            "Name": "InvertGetAndPostParameters",
+                            "DisplayName": "Invert POST/GET parameters",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": "Swap GET and POST methods for discovered payloads with parameters"
+                        },
+                        {
+                            "Name": "PathTruncations",
+                            "DisplayName": "Browse Site Directories",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": "Request modified URLs (remove file and extension)"
+                        },
+                        {
+                            "Name": "QueryTruncations",
+                            "DisplayName": "Browse Query-Truncated URLs",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": "Request modified URLs (remove query string)"
+                        },
+                        {
+                            "Name": "SiteMapsRootPath",
+                            "DisplayName": "Site Maps (root)",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": "Request Site map files anchored to /"
+                        },
+                        {
+                            "Name": "CountryCodes",
+                            "DisplayName": "Country Codes (root)",
+                            "Value": "False",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": "Request directories named with a country code (anchored to /)"
+                        },
+                        {
+                            "Name": "TwoLetterPermutations",
+                            "DisplayName": "Two-Letter Directories (root path)",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": "Request all files based on two-letter names (aa - zz)"
+                        },
+                        {
+                            "Name": "WordPress",
+                            "DisplayName": "Common WordPress URLs",
+                            "Value": "False",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": "Common WordPress files"
+                        }
+                    ],
+                    "ParentModules": null
+                },
+                {
+                    "UniqueID": "15b3b634-9606-4c6d-a952-1b3986a7d9b0",
+                    "DisplayName": null,
+                    "MaxConcurrent": 15,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": [
+                        {
+                            "Name": "translateStartUrlToLoginLandingPage",
+                            "DisplayName": "Translate start URL to Login Landing Page",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "saveForceBrowseNotFounds",
+                            "DisplayName": "Save 404 traffic for force browsed URLs",
+                            "Value": "False",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        }
+                    ],
+                    "ParentModules": null
+                },
+                {
+                    "UniqueID": "2e382bd5-144f-4381-bf5c-fb73d6378523",
+                    "DisplayName": null,
+                    "MaxConcurrent": 15,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": [
+                        {
+                            "Name": "queueParametersInput",
+                            "DisplayName": "Queue Parameters for Analysis",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        }
+                    ],
+                    "ParentModules": null
+                },
+                {
+                    "UniqueID": "39a1fadb-8b9c-44a8-8fe2-f221ee578fef",
+                    "DisplayName": null,
+                    "MaxConcurrent": 15,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": null,
+                    "ParentModules": [
+                        "a2a42e2b-356a-4d2a-9f7f-12ab9090b0b5",
+                        "1c383874-ae3f-4a43-a9a2-80d5ac2e9f3d"
+                    ]
+                },
+                {
+                    "UniqueID": "a2a42e2b-356a-4d2a-9f7f-12ab9090b0b5",
+                    "DisplayName": null,
+                    "MaxConcurrent": 5,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": null,
+                    "ParentModules": null
+                },
+                {
+                    "UniqueID": "738ad76f-ff03-4fe0-bec2-01a3019d9b0a",
+                    "DisplayName": null,
+                    "MaxConcurrent": 1,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": null,
+                    "ParentModules": null
+                },
+                {
+                    "UniqueID": "479c4c5d-f991-4429-80ec-34cb678b1df7",
+                    "DisplayName": null,
+                    "MaxConcurrent": 15,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": null,
+                    "ParentModules": [
+                        "a2a42e2b-356a-4d2a-9f7f-12ab9090b0b5",
+                        "1c383874-ae3f-4a43-a9a2-80d5ac2e9f3d"
+                    ]
+                },
+                {
+                    "UniqueID": "677a13e8-6689-40db-b935-a909226b7dfb",
+                    "DisplayName": null,
+                    "MaxConcurrent": 15,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": null,
+                    "ParentModules": [
+                        "a2a42e2b-356a-4d2a-9f7f-12ab9090b0b5",
+                        "1c383874-ae3f-4a43-a9a2-80d5ac2e9f3d",
+                        "8d191100-bbe6-4470-852d-fbcffa782684",
+                        "3428dd35-9b54-4121-a632-4cdbb1e914f6",
+                        "3d04dd24-2b30-4236-ab0a-a59d0c9e30ce",
+                        "15b3b634-9606-4c6d-a952-1b3986a7d9b0"
+                    ]
+                },
+                {
+                    "UniqueID": "1c383874-ae3f-4a43-a9a2-80d5ac2e9f3d",
+                    "DisplayName": null,
+                    "MaxConcurrent": 15,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": [
+                        {
+                            "Name": "AggressiveCipherSuiteSearch",
+                            "DisplayName": "Aggressive CipherSuite Enumeration",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        }
+                    ],
+                    "ParentModules": null
+                },
+                {
+                    "UniqueID": "dec419b6-229d-4d5b-8eaa-5e9739dabe9c",
+                    "DisplayName": null,
+                    "MaxConcurrent": 15,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": null,
+                    "ParentModules": [
+                        "a2a42e2b-356a-4d2a-9f7f-12ab9090b0b5",
+                        "1c383874-ae3f-4a43-a9a2-80d5ac2e9f3d"
+                    ]
+                },
+                {
+                    "UniqueID": "3428dd35-9b54-4121-a632-4cdbb1e914f6",
+                    "DisplayName": null,
+                    "MaxConcurrent": 10,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": null,
+                    "ParentModules": [
+                        "a2a42e2b-356a-4d2a-9f7f-12ab9090b0b5",
+                        "1c383874-ae3f-4a43-a9a2-80d5ac2e9f3d"
+                    ]
+                },
+                {
+                    "UniqueID": "3d04dd24-2b30-4236-ab0a-a59d0c9e30ce",
+                    "DisplayName": null,
+                    "MaxConcurrent": 10,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": null,
+                    "ParentModules": null
+                },
+                {
+                    "UniqueID": "f37ff67a-43c3-4de8-9dda-7b68fb36f047",
+                    "DisplayName": null,
+                    "MaxConcurrent": 1,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": [
+                        {
+                            "Name": "maxIterationsInput",
+                            "DisplayName": "Max Terminal Iterations",
+                            "Value": "50",
+                            "DataType": 1,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "maxFinalizerMinutesInput",
+                            "DisplayName": "Max Finalizer Minutes",
+                            "Value": "0",
+                            "DataType": 1,
+                            "List": null,
+                            "Description": null
+                        }
+                    ],
+                    "ParentModules": null
+                },
+                {
+                    "UniqueID": "acd86f2a-b13a-402f-924f-778a9bdd8a91",
+                    "DisplayName": null,
+                    "MaxConcurrent": 1,
+                    "Isolate": false,
+                    "MaxDurationTicks": null,
+                    "NodeProcessCount": 1,
+                    "BalanceWithModules": null,
+                    "BalanceWithThreshold": 0,
+                    "ConfigItems": [
+                        {
+                            "Name": "finisher_config_probeStoredXSS",
+                            "DisplayName": "Probe Stored XSS",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        },
+                        {
+                            "Name": "finisher_config_probeCookies",
+                            "DisplayName": "Probe Cookies",
+                            "Value": "True",
+                            "DataType": 5,
+                            "List": null,
+                            "Description": null
+                        }
+                    ],
+                    "ParentModules": [
+                        "f37ff67a-43c3-4de8-9dda-7b68fb36f047"
+                    ]
+                }
+            ],
+            "path": "/EnabledModules",
+            "op": "replace"
+        }
+    ]
+}
