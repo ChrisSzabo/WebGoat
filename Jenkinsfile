@@ -16,8 +16,8 @@ pipeline {
       steps {
         withDockerRegistry(credentialsId: 'b367c07a-2e58-49ab-ab4b-46c980764afe', url: "https://${params.DOCKER_REGISTRY}") {
           withCredentials([
-            string(credentialsId: 'venari-client-secret', variable: 'CLIENT_SECRET'),
-            string(credentialsId: 'venari-client-id', variable: 'CLIENT_ID'),
+            string(credentialsId: 'venari-client_secret', variable: 'CLIENT_SECRET'),
+            string(credentialsId: 'venari-client_id', variable: 'CLIENT_ID'),
           ]){
             //Deploy webgoat and make sure it's running
             sh "python /app/whitesnake/scan.py --swarm-host ${SWARM_MANAGER_ADDR} --stackname webgoat --tlsverify --compose-file ./Venari/docker-compose.yml --tls-folder /home/.docker"
