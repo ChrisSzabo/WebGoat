@@ -12,6 +12,7 @@ pipeline {
         docker {
           image "${DOCKER_REGISTRY}/whitesnake"
         }
+      }
       steps {
         withDockerRegistry(credentialsId: 'b367c07a-2e58-49ab-ab4b-46c980764afe', url: "https://${params.DOCKER_REGISTRY}") {
           withCredentials([
