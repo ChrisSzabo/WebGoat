@@ -19,7 +19,6 @@ def do_login():
         raise Exception("Invalid login information")
     return VenariApi(auth,master_url)
 
-
 @click.group()
 def cli():
     pass
@@ -33,7 +32,14 @@ def upload_templates():
     api:VenariApi=do_login()
     api.import_template_from_file('scan-template.jobtemplate.json',venari_workspace,"http://webgoat:8080")
     api.import_workflow_from_file('register-user.workflow.yaml',venari_workspace)
+
+@cli.command()
+def start_scan():
+    api:VenariApi=do_login()
     api.start_job_fromtemplate("CI-CD",venari_workspace,"Authenticated Exploit")
+
+@cli.command()
+def export_data():
     pass
 
 if __name__ == '__main__':

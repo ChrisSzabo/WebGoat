@@ -30,7 +30,25 @@
             "op": "replace"
         },
         {
-            "value": [],
+            "value": [
+                {
+                    "Name":"endpoint",
+                    "Value":"http://localhost:9191"
+                },
+                {
+                    "Name":"Username",
+                    "Value":"administrator"
+                },
+                {
+                    "Name":"Password",
+                    "Value":"password"
+                },
+                {
+                    "Name":"Password_2",
+                    "Value":"password"
+                }
+                
+            ],
             "path": "/WorkflowSettings/RunSettings/Parameters",
             "op": "replace"
         },
