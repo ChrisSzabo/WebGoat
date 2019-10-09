@@ -21,8 +21,7 @@ pipeline {
           ]){
             //Deploy webgoat and make sure it's running
             sh "python /app/whitesnake/scan.py deploy --swarm-host ${SWARM_MANAGER_ADDR} --stackname webgoat --tlsverify --compose-file ./Venari/docker-compose.yml --tls-folder /home/.docker"
-            sh "cd Venari"
-            sh 'python scan.py upload-templates'
+            sh 'cd Venari && python ./scan.py upload-templates'
           }
         }
       }
