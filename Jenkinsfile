@@ -10,7 +10,7 @@ pipeline {
     stage('Security Scan') {
       agent {
         docker {
-          image "${DOCKER_REGISTRY}/whitesnake"
+          image "${DOCKER_REGISTRY}whitesnake"
         }
       }
       steps {
